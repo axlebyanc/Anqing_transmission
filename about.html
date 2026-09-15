@@ -355,6 +355,32 @@
   p{ text-wrap: pretty; }
   h1, h2, h3, h4{ text-wrap: balance; }
 
+
+  /* Real logo + warehouse photo */
+  .brand-mark{width:38px; height:38px; flex:none; object-fit:contain;}
+  .mobile-menu-logo{width:60px; height:60px; margin:0 auto 10px; display:block; object-fit:contain;}
+  .footer-brand-row{display:flex; align-items:center; gap:10px;}
+  .footer-logo{width:26px; height:26px; flex:none; object-fit:contain;}
+
+  .warehouse-strip{padding:0 0 80px;}
+  .warehouse-photo{position:relative; border-radius:4px; overflow:hidden;}
+  .warehouse-photo img{width:100%; height:420px; object-fit:cover; display:block;}
+  .warehouse-caption{
+    position:absolute; left:0; right:0; bottom:0; padding:30px 32px;
+    background:linear-gradient(0deg, rgba(15,17,19,.90) 0%, rgba(15,17,19,.45) 55%, rgba(15,17,19,0) 100%);
+    color:var(--paper);
+  }
+  .warehouse-caption .eyebrow-small{
+    font-family:'Oswald'; font-size:12px; letter-spacing:.08em; color:var(--amber);
+    margin-bottom:8px; display:block;
+  }
+  .warehouse-caption p{font-size:15px; max-width:46ch; color:var(--paper);}
+
+  @media (max-width:860px){
+    .warehouse-photo img{height:260px;}
+    .warehouse-caption{padding:20px 22px;}
+  }
+
 </style>
 </head>
 <body>
@@ -362,11 +388,7 @@
 <header>
   <div class="wrap">
     <a class="brand" href="index.html">
-      <svg class="brand-mark" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="20" cy="20" r="18" stroke="#E2711D" stroke-width="2"/>
-        <circle cx="20" cy="20" r="6" stroke="#EFEEEA" stroke-width="2"/>
-        <path d="M20 2V8M20 32V38M38 20H32M8 20H2M33.6 6.4L29.4 10.6M10.6 29.4L6.4 33.6M33.6 33.6L29.4 29.4M10.6 10.6L6.4 6.4" stroke="#EFEEEA" stroke-width="2" stroke-linecap="round"/>
-      </svg>
+      <img class="brand-mark" src="assets/logo.png" alt="安慶科技傳動 Logo">
       <span class="brand-text">
         <span class="zh">安慶科技傳動</span>
         <span class="en">AN QING TRANSMISSION</span>
@@ -398,6 +420,7 @@
 <div class="mobile-menu" id="mobileMenu">
   <div class="mobile-menu-top">
     <div class="mobile-menu-brand">
+      <img class="mobile-menu-logo" src="assets/logo.png" alt="安慶科技傳動 Logo">
       <span class="zh">安慶科技傳動</span>
       <span class="en">AN QING TRANSMISSION</span>
     </div>
@@ -448,11 +471,26 @@
   </div>
 </section>
 
+<section class="warehouse-strip">
+  <div class="wrap">
+    <div class="warehouse-photo">
+      <img src="assets/warehouse.jpg" alt="安慶科技傳動零件庫房，貨架上分類擺放各式傳動軸零件" loading="lazy">
+      <div class="warehouse-caption">
+        <span class="eyebrow-small" data-zh="自有庫房" data-en="Our Warehouse">自有庫房</span>
+        <p data-zh="全車系零件分類上架，現場備料齊全，維修不必久等。" data-en="Parts are sorted and shelved in-house, so most repairs don't require a long wait for stock.">全車系零件分類上架，現場備料齊全，維修不必久等。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <footer>
   <div class="wrap footer-inner">
-    <div>
-      <span class="f-brand">安慶科技傳動有限公司</span>
-      <div class="f-meta" data-zh="台北總部｜台中分店｜高雄分店　02-8522-3555" data-en="Taipei HQ | Taichung Branch | Kaohsiung Branch   02-8522-3555">台北總部｜台中分店｜高雄分店　02-8522-3555</div>
+    <div class="footer-brand-row">
+      <img class="footer-logo" src="assets/logo.png" alt="安慶科技傳動 Logo">
+      <div>
+        <span class="f-brand">安慶科技傳動有限公司</span>
+        <div class="f-meta" data-zh="台北總部｜台中分店｜高雄分店　02-8522-3555" data-en="Taipei HQ | Taichung Branch | Kaohsiung Branch   02-8522-3555">台北總部｜台中分店｜高雄分店　02-8522-3555</div>
+      </div>
     </div>
     <nav class="footer-nav">
       <a href="index.html" data-zh="首頁" data-en="Home">首頁</a>
