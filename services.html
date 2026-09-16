@@ -228,8 +228,8 @@
     .location-grid{grid-template-columns:1fr;}
     .about .wrap{grid-template-columns:1fr;}
     .contact .wrap{grid-template-columns:1fr;}
-    h2{font-size:25px;}
-    .hero h1{font-size:29px;}
+    h2{font-size:22px;}
+    .hero h1{font-size:25px;}
   }
 
   /* Multi-page nav additions */
@@ -312,6 +312,15 @@
 
   @media (max-width:860px){
     .nav-toggle{display:block;}
+    .teaser-grid{
+      display:flex; grid-template-columns:none; overflow-x:auto; scroll-snap-type:x mandatory;
+      gap:14px; margin:32px -20px 0; padding:0 20px 10px; -webkit-overflow-scrolling:touch;
+      scrollbar-width:none;
+    }
+    .teaser-grid::-webkit-scrollbar{display:none;}
+    .teaser-card{flex:0 0 78%; scroll-snap-align:start;}
+    .qc-inner{flex-direction:column; align-items:flex-start;}
+    .footer-inner{flex-direction:column;}
   }
 
 
@@ -379,6 +388,17 @@
   @media (max-width:860px){
     .warehouse-photo img{height:260px;}
     .warehouse-caption{padding:20px 22px;}
+    .page-hero h1{font-size:23px;}
+    .page-hero{padding:40px 0 34px;}
+  }
+
+
+  .swipe-hint{display:none;}
+  @media (max-width:860px){
+    .swipe-hint{
+      display:block; text-align:center; font-size:12.5px; color:var(--steel);
+      margin-top:12px; font-family:'Oswald'; letter-spacing:.04em;
+    }
   }
 
 </style>
@@ -457,7 +477,7 @@
 <section class="services" id="services">
   <div class="wrap">
     <div class="eyebrow-line"><span class="dash"></span><span data-zh="服務項目" data-en="Services">服務項目</span></div>
-    <h2 data-zh="傳動軸與煞車分泵，現場維修主力項目" data-en="Driveshaft & Brake Calipers, Our Core Repairs">傳動軸與煞車分泵，現場維修主力項目</h2>
+    <h2 data-zh-html="傳動軸與煞車分泵，<br>現場維修主力項目" data-en-html="Driveshaft &amp; Brake Calipers,<br>Our Core Repairs">傳動軸與煞車分泵，<br>現場維修主力項目</h2>
     <p class="section-lead" data-zh="安慶主要承接傳動軸與煞車蝶式分泵的現場維修，車主可自行拆下故障零件送修，或直接選購新品更換；其他底盤零件則協助對接合作廠商代為詢價。" data-en="We mainly handle on-site repair of driveshafts and brake calipers. You can bring in the removed faulty part for repair, or buy a new one to install yourself. Other chassis parts are sourced through our partner suppliers.">安慶主要承接傳動軸與煞車蝶式分泵的現場維修，車主可自行拆下故障零件送修，或直接選購新品更換；其他底盤零件則協助對接合作廠商代為詢價。</p>
 
     <div class="svc-grid">
@@ -486,7 +506,7 @@
 <section class="brands">
   <div class="wrap">
     <div class="eyebrow-line"><span class="dash"></span><span data-zh="服務車系" data-en="Makes We Service">服務車系</span></div>
-    <h2 data-zh="全車系皆可服務，這些車系經驗最豐富" data-en="All Makes Welcome — Especially These">全車系皆可服務，這些車系經驗最豐富</h2>
+    <h2 data-zh-html="全車系皆可服務，<br>這些車系經驗最豐富" data-en-html="All Makes Welcome —<br>Especially These">全車系皆可服務，<br>這些車系經驗最豐富</h2>
     <p class="section-lead" data-zh="不論日系、歐系或美系車款，安慶都能處理；以下為到店頻率較高、備料較齊全的車系。" data-en="Japanese, European or American — we handle them all. These are the makes we see most often and keep the best parts availability for.">不論日系、歐系或美系車款，安慶都能處理；以下為到店頻率較高、備料較齊全的車系。</p>
     <div class="brand-pills">
       <span>Toyota</span>

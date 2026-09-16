@@ -228,8 +228,8 @@
     .location-grid{grid-template-columns:1fr;}
     .about .wrap{grid-template-columns:1fr;}
     .contact .wrap{grid-template-columns:1fr;}
-    h2{font-size:25px;}
-    .hero h1{font-size:29px;}
+    h2{font-size:22px;}
+    .hero h1{font-size:25px;}
   }
 
   /* Multi-page nav additions */
@@ -312,6 +312,15 @@
 
   @media (max-width:860px){
     .nav-toggle{display:block;}
+    .teaser-grid{
+      display:flex; grid-template-columns:none; overflow-x:auto; scroll-snap-type:x mandatory;
+      gap:14px; margin:32px -20px 0; padding:0 20px 10px; -webkit-overflow-scrolling:touch;
+      scrollbar-width:none;
+    }
+    .teaser-grid::-webkit-scrollbar{display:none;}
+    .teaser-card{flex:0 0 78%; scroll-snap-align:start;}
+    .qc-inner{flex-direction:column; align-items:flex-start;}
+    .footer-inner{flex-direction:column;}
   }
 
 
@@ -379,6 +388,17 @@
   @media (max-width:860px){
     .warehouse-photo img{height:260px;}
     .warehouse-caption{padding:20px 22px;}
+    .page-hero h1{font-size:23px;}
+    .page-hero{padding:40px 0 34px;}
+  }
+
+
+  .swipe-hint{display:none;}
+  @media (max-width:860px){
+    .swipe-hint{
+      display:block; text-align:center; font-size:12.5px; color:var(--steel);
+      margin-top:12px; font-family:'Oswald'; letter-spacing:.04em;
+    }
   }
 
 </style>
@@ -503,7 +523,7 @@
 <section class="teasers">
   <div class="wrap">
     <div class="eyebrow-line"><span class="dash"></span><span data-zh="安慶能為您做什麼" data-en="What We Do">安慶能為您做什麼</span></div>
-    <h2 data-zh="從維修到據點資訊，一次看懂安慶" data-en="Everything You Need to Know About AnQing">從維修到據點資訊，一次看懂安慶</h2>
+    <h2 data-zh-html="從維修到據點資訊，<br>一次看懂安慶" data-en-html="Everything You Need to Know<br>About AnQing">從維修到據點資訊，<br>一次看懂安慶</h2>
 
     <div class="teaser-grid">
       <a class="teaser-card" href="services.html">
@@ -522,13 +542,14 @@
         <span class="teaser-link" data-zh="了解安慶" data-en="About AnQing">了解安慶</span>
       </a>
     </div>
+    <p class="swipe-hint" data-zh="左右滑動查看更多" data-en="Swipe to see more">左右滑動查看更多</p>
   </div>
 </section>
 
 <section class="brands">
   <div class="wrap">
     <div class="eyebrow-line"><span class="dash"></span><span data-zh="服務車系" data-en="Makes We Service">服務車系</span></div>
-    <h2 data-zh="全車系皆可服務，這些車系經驗最豐富" data-en="All Makes Welcome — Especially These">全車系皆可服務，這些車系經驗最豐富</h2>
+    <h2 data-zh-html="全車系皆可服務，<br>這些車系經驗最豐富" data-en-html="All Makes Welcome —<br>Especially These">全車系皆可服務，<br>這些車系經驗最豐富</h2>
     <p class="section-lead" data-zh="不論日系、歐系或美系車款，安慶都能處理；以下為到店頻率較高、備料較齊全的車系。" data-en="Japanese, European or American — we handle them all. These are the makes we see most often and keep the best parts availability for.">不論日系、歐系或美系車款，安慶都能處理；以下為到店頻率較高、備料較齊全的車系。</p>
     <div class="brand-pills">
       <span>Toyota</span>
@@ -556,7 +577,7 @@
     <div class="qc-inner">
       <div>
         <div class="eyebrow-line"><span class="dash"></span><span data-zh="服務據點" data-en="Locations">服務據點</span></div>
-        <h2 data-zh="台北．台中．高雄　三據點為您服務" data-en="Taipei · Taichung · Kaohsiung">台北．台中．高雄　三據點為您服務</h2>
+        <h2 data-zh-html="台北 · 台中 · 高雄<br>三據點為您服務" data-en-html="Taipei · Taichung · Kaohsiung">台北 · 台中 · 高雄<br>三據點為您服務</h2>
       </div>
       <a class="btn btn-primary" href="contact.html" data-zh="查看據點與地圖" data-en="View Locations &amp; Map">查看據點與地圖</a>
     </div>

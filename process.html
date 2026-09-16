@@ -228,8 +228,8 @@
     .location-grid{grid-template-columns:1fr;}
     .about .wrap{grid-template-columns:1fr;}
     .contact .wrap{grid-template-columns:1fr;}
-    h2{font-size:25px;}
-    .hero h1{font-size:29px;}
+    h2{font-size:22px;}
+    .hero h1{font-size:25px;}
   }
 
   /* Multi-page nav additions */
@@ -312,6 +312,15 @@
 
   @media (max-width:860px){
     .nav-toggle{display:block;}
+    .teaser-grid{
+      display:flex; grid-template-columns:none; overflow-x:auto; scroll-snap-type:x mandatory;
+      gap:14px; margin:32px -20px 0; padding:0 20px 10px; -webkit-overflow-scrolling:touch;
+      scrollbar-width:none;
+    }
+    .teaser-grid::-webkit-scrollbar{display:none;}
+    .teaser-card{flex:0 0 78%; scroll-snap-align:start;}
+    .qc-inner{flex-direction:column; align-items:flex-start;}
+    .footer-inner{flex-direction:column;}
   }
 
 
@@ -379,6 +388,17 @@
   @media (max-width:860px){
     .warehouse-photo img{height:260px;}
     .warehouse-caption{padding:20px 22px;}
+    .page-hero h1{font-size:23px;}
+    .page-hero{padding:40px 0 34px;}
+  }
+
+
+  .swipe-hint{display:none;}
+  @media (max-width:860px){
+    .swipe-hint{
+      display:block; text-align:center; font-size:12.5px; color:var(--steel);
+      margin-top:12px; font-family:'Oswald'; letter-spacing:.04em;
+    }
   }
 
 </style>
@@ -457,7 +477,7 @@
 <section class="process" id="process">
   <div class="wrap">
     <div class="eyebrow-line"><span class="dash"></span><span data-zh="維修流程" data-en="Process">維修流程</span></div>
-    <h2 data-zh="電話了解車況，到店看實品現場報價" data-en="Call First, Quote On-site After Inspection">電話了解車況，到店看實品現場報價</h2>
+    <h2 data-zh-html="電話了解車況，<br>到店看實品現場報價" data-en-html="Call First,<br>Quote On-site After Inspection">電話了解車況，<br>到店看實品現場報價</h2>
 
     <div class="process-list">
       <div class="p-step">
